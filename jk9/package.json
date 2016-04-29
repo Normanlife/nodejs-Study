@@ -1,0 +1,21 @@
+{
+  "name": "jk9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.13.4",
+    "mysql-activerecord": "^0.8.6",
+    "mysql": "^2.10.2",
+    "orm": "^2.1.30"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

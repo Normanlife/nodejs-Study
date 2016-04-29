@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>百度新闻</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript" src="/js/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="/js/for-ajax.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <div class="main-nav-box">
+                <ul>
+                    <li><a href="/0">首页</a></li>
+                    <li id="baijia"><a href="/1">百家</a></li>
+                    <li id="caijing"><a href="/2">财经</a></li>
+                    <li id="yule"><a href="/3">娱乐</a></li>
+                    <li><a href="/4">体育</a></li>
+                    <li><a href="#">互联网</a></li>
+                    <li><a href="#">时尚</a></li>
+                    <li><a href="#">汽车</a></li>
+                    <li><a href="#">国内</a></li>
+                    <li><a href="#">国际</a></li>
+                    <li><a href="#">军事</a></li>
+                    <li><a href="#">社会</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-container">
+            <div class="content-box">
+
+            <% for(var i=0;i<response.length;i++){ %>
+
+                <div class="content">
+                    <div class="content-left">
+                        <h2> <%= response[i].title %> </h2>
+                        <span> <%= response[i].content %> </span>
+                        <p> <%= response[i].time %> </p>
+                    </div>
+                    
+                    <div class="content-right">
+                        <img src=" <%= response[i].img %> ">
+                    </div>
+                </div>
+                <!--<div class="content"></div>
+                <div class="content"></div> -->
+            <% } %>
+
+            </div>
+        </div>
+    </div>
+    <div id="new-temp"></div>
+</body>
+<!-- <script type="text/javascript" src="app1.js"></script> -->
+
+
+</html>

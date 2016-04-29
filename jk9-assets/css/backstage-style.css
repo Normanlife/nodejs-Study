@@ -1,0 +1,45 @@
+.box {
+    width: 400px;
+    border: 1px solid #000;
+    margin: 15px;
+    padding: 10px;
+}
+
+.box-lookup {
+    border: 1px solid #000;
+    margin: 15px;
+    padding: 10px;
+}
+
+#rewrite {
+    display: none;
+}
+
+.visible {
+    display: none;
+}
+.t-id{
+    width: 22px;
+    border: 1px solid black;
+}
+.t-title{
+    width: 117px;
+    border: 1px solid black;
+    word-break:break-all;
+}
+.t-content{
+    width: 380px;
+    border: 1px solid black;
+    word-break:break-all;
+}
+.t-img {
+    width: 385px;
+    height: auto;
+    word-break:break-all;
+    border: 1px solid black;
+}
+.t-time{
+    width: 130px;
+    word-break:break-all;
+    border: 1px solid black;
+}

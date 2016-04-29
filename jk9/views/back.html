@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新闻后台</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/backstage-style.css">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <nav class="col-md-2">
+            <ul class="nav nav-pills nav-stacked" id="ul">
+                <li class="active"><a href="#">添加新闻</a></li>
+                <li><a href="#">查找新闻</a></li>
+                <li><a href="#">删除新闻</a></li>
+                <li><a href="#">更改新闻</a></li>
+            </ul>
+        </nav>
+        <div class="col-md-10" id="content">
+            <!-- 添加新闻板块 -->
+            <div class="box visible">
+                <div>
+                    <p>添加新闻内容</p>
+                    <label for='cat'>新闻版块</label>
+                    <select name='cat' class="cat">
+                        <option value='0'>首页</option>
+                        <option value='1'>百家</option>
+                        <option value='2'>财经</option>
+                        <option value='3'>娱乐</option>
+                        <option value='4'>体育</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="title">新闻标题</label>
+                    <input type="text" name="title" class="title form-control">
+                </div>
+                <div>
+                    <label for="content">新闻内容</label>
+                    <textarea type="text" name="content" class="content form-control"></textarea>
+                </div>
+                <div>
+                    <label for="img">新闻图片</label>
+                    <input type="file" name="img" class="img form-control">
+                </div>
+                <div>
+                    <label for="time">编写时间</label>
+                    <input type="date" name="time" class="time form-control">
+                </div>
+                <div>
+                    <button type="submit" value="提交" id="submit1" class="btn btn-info">提交</button>
+                </div>
+            </div>
+            <!-- 查找新闻板块 -->
+            <div class="box-lookup visible">
+                <p>查询数据库新闻储存</p>
+                <div>
+                    <label>需要查询的版块</label>
+                    <select name='cat' class="cat1">
+                        <option value='0'>首页</option>
+                        <option value='1'>百家</option>
+                        <option value='2'>财经</option>
+                        <option value='3'>娱乐</option>
+                        <option value='4'>体育</option>
+                    </select>
+                    <button type="submit" value="提交" id="submit2" class="btn btn-info">提交</button>
+                    <p>输出结果：</p>
+                    <table id="something">
+                        <th class="t-id">id</th>
+                        <th class="t-title">title</th>
+                        <th class="t-content">content</th>
+                        <th class="t-img">img</th>
+                        <th class="t-time">time</th>
+                    </table>
+                </div>
+            </div>
+            <!-- 删除新闻板块 -->
+            <div class="box visible">
+                <p>删除新闻</p>
+                <div>
+                    <p>请选择需要删除的新闻的<b>ID号:</b></p>
+                    <input type="text" value="请输入数字" id="deletenum" class="form-control">
+                    <button id="submit3" class="btn btn-danger inline-block">确认删除</button>
+                </div>
+            </div>
+            <!-- 更改新闻板块 -->
+            <div class="box-lookup visible">
+                <p>更改已有的新闻</p>
+                <div>
+                    <p>请选择需要修改的新闻的<b>ID号:</b></p>
+                    <input type="text" value="请输入数字" id="rewirte-num" class="form-control">
+                    <button id="submit4" class="btn btn-info">确定</button>
+                </div>
+                <div id="rewrite">
+                    <div>
+                        <span>ID号:</span>
+                        <input type="text" id="reid" readonly id="reid" class="form-control"></input>
+                    </div>
+                    <div>
+                        <span>版块:</span>
+                        <select name='cat' id="recat">
+                            <option value='0'>首页</option>
+                            <option value='1'>百家</option>
+                            <option value='2'>财经</option>
+                            <option value='3'>娱乐</option>
+                            <option value='4'>体育</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>标题:</span>
+                        <input type="text" id="retitle" class="form-control"></input>
+                    </div>
+                    <div>
+                        <span>内容:</span>
+                        <textarea type="text" id="recontent" class="form-control"></textarea>
+                    </div>
+                    <div>
+                        <span>图片地址:</span>
+                        <input type="text" id="reimg" class="form-control"></input>
+                    </div>
+                    <div>
+                        <span>时间:</span>
+                        <input type="date" id="retime" class="form-control "></input>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit5" class="btn btn-info">确认修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 加载JS -->
+    <script type="text/javascript" src="/js/backstageapp.js"></script>
+</body>
+
+</html>
